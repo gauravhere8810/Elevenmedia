@@ -2601,3 +2601,459 @@ footer::before {
     gap: 1.5rem 2.5rem;
   }
 }
+
+/* ==========================================================================
+   INNER PAGES (Social Media, Web Development, Reviews, About)
+   Reuses existing tokens: --brand-primary, --accent, --near-black, --off-white
+   ========================================================================== */
+.inner-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 75% 35%, rgba(43, 52, 146, 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse at 25% 75%, rgba(11, 14, 26, 0.95) 0%, transparent 50%),
+    linear-gradient(135deg, #0B0E1A 0%, #151a44 42%, #202766 70%, #0B0E1A 100%);
+  margin-top: -58px;
+  padding-top: 116px;
+  padding-bottom: 5.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.inner-hero-container {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.inner-hero-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+
+.inner-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+  margin-bottom: 1.3rem;
+}
+
+.inner-hero-intro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  max-width: 680px;
+  margin-bottom: 2.2rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.2rem;
+}
+
+.breadcrumbs a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+  color: var(--accent);
+}
+
+.breadcrumbs-sep {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.breadcrumbs-current {
+  color: var(--accent);
+}
+
+/* Alternating Page Sections */
+.page-section {
+  padding: 5rem 2rem;
+}
+
+.page-section-light {
+  background: var(--off-white);
+}
+
+.page-section-white {
+  background: var(--white);
+}
+
+.page-section-dark {
+  background:
+    radial-gradient(ellipse at 85% 50%, rgba(43, 52, 146, 0.35) 0%, transparent 60%),
+    linear-gradient(135deg, #0B0E1A 0%, #11163a 50%, #0B0E1A 100%);
+  color: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.page-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.page-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.page-section-light .page-eyebrow,
+.page-section-white .page-eyebrow {
+  color: var(--brand-primary);
+}
+
+.page-section-dark .page-eyebrow {
+  color: var(--accent);
+}
+
+.page-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.page-section-light .page-heading,
+.page-section-white .page-heading {
+  color: var(--brand-primary);
+}
+
+.page-section-dark .page-heading {
+  color: var(--white);
+}
+
+.page-lead {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  max-width: 760px;
+  margin-bottom: 2.8rem;
+}
+
+.page-section-light .page-lead,
+.page-section-white .page-lead {
+  color: var(--mid-gray);
+}
+
+.page-section-dark .page-lead {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+/* Feature & Service Card Grids */
+.page-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.page-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.page-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.page-card {
+  padding: 2.2rem 1.8rem;
+  border-radius: 8px;
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  box-shadow: 0 4px 18px rgba(11, 14, 26, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(11, 14, 26, 0.08);
+}
+
+.page-card-dark {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.page-card-dark:hover {
+  transform: translateY(-2px);
+  border-color: rgba(78, 199, 239, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(78, 199, 239, 0.12);
+}
+
+.page-card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--near-black);
+  line-height: 1.3;
+}
+
+.page-card-dark .page-card-title {
+  color: var(--white);
+}
+
+.page-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--mid-gray);
+}
+
+.page-card-dark .page-card-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Step / Process workflow items */
+.step-item {
+  padding: 1.8rem 1.5rem;
+  background: var(--white);
+  border-top: 3px solid var(--brand-primary);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(11, 14, 26, 0.04);
+}
+
+.step-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--brand-primary);
+  margin-bottom: 0.4rem;
+}
+
+.step-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--near-black);
+  margin-bottom: 0.5rem;
+}
+
+.step-text {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--mid-gray);
+}
+
+/* Policy / Boundary Box ("What we do NOT do") */
+.boundary-box {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-left: 4px solid var(--brand-primary);
+  padding: 2rem 2.2rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+}
+
+.boundary-box-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--near-black);
+  margin-bottom: 0.8rem;
+}
+
+.boundary-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.boundary-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--mid-gray);
+}
+
+.boundary-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+/* Founder Cards on About Page */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.founder-profile-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(11, 14, 26, 0.06);
+}
+
+.founder-profile-img-wrap {
+  position: relative;
+  background: linear-gradient(135deg, #0B0E1A 0%, #151a44 100%);
+  height: 320px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.founder-profile-img {
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+}
+
+.founder-profile-content {
+  padding: 1.8rem;
+}
+
+.founder-profile-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--near-black);
+}
+
+.founder-profile-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-top: 0.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.founder-profile-bio {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--mid-gray);
+}
+
+/* Internal Links Bar */
+.internal-links-bar {
+  background: var(--white);
+  border-top: 1px solid var(--light-gray);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.internal-links-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-bottom: 1rem;
+}
+
+.internal-links-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.8rem;
+  list-style: none;
+}
+
+.internal-links-nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.18s;
+}
+
+.internal-links-nav a:hover {
+  color: var(--accent);
+}
+
+/* Inner Page Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .page-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-hero {
+    padding-top: 96px;
+    padding-bottom: 4rem;
+  }
+
+  .page-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .page-grid-3,
+  .page-grid-2,
+  .page-grid-4,
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .founder-profile-img-wrap {
+    height: 260px;
+  }
+
+  .founder-profile-img {
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner-hero-title {
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
+  }
+
+  .boundary-box {
+    padding: 1.4rem 1.2rem;
+  }
+}
