@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#4EC7EF" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#2B3492" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0B0E1A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyanIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4EC7EF"/>
+      <stop offset="100%" stop-color="#2B3492"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161c42" stop-opacity="0.90"/>
+      <stop offset="100%" stop-color="#0c1026" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="chartArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4EC7EF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#4EC7EF" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="phoneBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4EC7EF" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#2B3492" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4EC7EF" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <rect width="700" height="500" rx="16" fill="#0c1024"/>
+  <circle cx="350" cy="250" r="260" fill="url(#bgGlow)"/>
+
+  <!-- Isometric Grid Lines in Background -->
+  <g opacity="0.12" stroke="#4EC7EF" stroke-width="1">
+    <line x1="80" y1="440" x2="620" y2="440"/>
+    <line x1="120" y1="400" x2="580" y2="400"/>
+    <line x1="160" y1="360" x2="540" y2="360"/>
+    <line x1="180" y1="460" x2="260" y2="320"/>
+    <line x1="300" y1="460" x2="380" y2="320"/>
+    <line x1="420" y1="460" x2="500" y2="320"/>
+  </g>
+
+  <!-- Floating Decorative Circles/Rings -->
+  <circle cx="130" cy="110" r="32" stroke="url(#cyanIndigo)" stroke-width="1.8" fill="none" opacity="0.4" stroke-dasharray="4 4"/>
+  <circle cx="580" cy="390" r="42" stroke="url(#cyanIndigo)" stroke-width="1.5" fill="none" opacity="0.35"/>
+  <circle cx="580" cy="390" r="5" fill="#4EC7EF" opacity="0.7"/>
+  
+  <!-- Sparkles / Stars -->
+  <path d="M 175 75 Q 175 85 185 85 Q 175 85 175 95 Q 175 85 165 85 Q 175 85 175 75 Z" fill="#4EC7EF" opacity="0.65"/>
+  <path d="M 545 95 Q 545 106 556 106 Q 545 106 545 117 Q 545 106 534 106 Q 545 106 545 95 Z" fill="#4EC7EF" opacity="0.75"/>
+
+  <!-- MAIN ILLUSTRATION: Center Smartphone / Device -->
+  <g transform="translate(245, 55)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="210" height="385" rx="32" fill="#080b18" stroke="url(#phoneBorder)" stroke-width="2.5"/>
+    <!-- Inner Screen -->
+    <rect x="8" y="8" width="194" height="369" rx="24" fill="#0f1430"/>
+    
+    <!-- Screen Header (Camera Notch) -->
+    <rect x="65" y="16" width="80" height="14" rx="7" fill="#080b18"/>
+    <circle cx="130" cy="23" r="3" fill="#4EC7EF" opacity="0.6"/>
+
+    <!-- Video / Social Post Mockup Card inside screen -->
+    <g transform="translate(16, 44)">
+      <rect x="0" y="0" width="178" height="225" rx="16" fill="url(#cyanIndigo)" opacity="0.15"/>
+      <rect x="0" y="0" width="178" height="225" rx="16" stroke="#4EC7EF" stroke-width="1" opacity="0.35" fill="none"/>
+      
+      <!-- Video Play Center Button -->
+      <circle cx="89" cy="98" r="26" fill="url(#cyanIndigo)" filter="url(#softGlow)"/>
+      <polygon points="84,87 100,98 84,109" fill="#FFFFFF"/>
+      
+      <!-- Live Video Tag -->
+      <rect x="12" y="12" width="54" height="20" rx="6" fill="rgba(11, 14, 26, 0.8)"/>
+      <circle cx="22" cy="22" r="3.5" fill="#4EC7EF"/>
+      <text x="30" y="26" font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">REEL</text>
+
+      <!-- Post Stats Bar -->
+      <g transform="translate(12, 185)">
+        <text x="0" y="12" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">1.8M Views</text>
+        <text x="0" y="25" font-family="'Montserrat', sans-serif" font-size="8" font-weight="500" fill="#4EC7EF">@elevenmedia.in</text>
+      </g>
+    </g>
+
+    <!-- Bottom Engagement Bar on Phone -->
+    <g transform="translate(22, 290)">
+      <!-- Heart Icon -->
+      <path d="M12 4.5 C9 1, 4 3, 4 7 C4 11, 12 17, 12 17 C12 17, 20 11, 20 7 C20 3, 15 1, 12 4.5 Z" fill="#FF4B72" transform="scale(0.85)"/>
+      <text x="24" y="12" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">48.2K</text>
+      
+      <!-- Comment Icon -->
+      <g transform="translate(78, 0)">
+        <path d="M3 4 C3 2.9 3.9 2 5 2 L17 2 C18.1 2 19 2.9 19 4 L19 12 C19 13.1 18.1 14 17 14 L7 14 L3 17 L3 4 Z" stroke="#4EC7EF" stroke-width="1.5" fill="none" transform="scale(0.85)"/>
+        <text x="20" y="12" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">3.1K</text>
+      </g>
+
+      <!-- Share Icon -->
+      <g transform="translate(140, 0)">
+        <path d="M4 8 L14 2 L14 6 C19 7 21 11 22 15 C20 12 17 11 14 11 L14 15 Z" fill="#4EC7EF" opacity="0.9" transform="scale(0.7)"/>
+      </g>
+    </g>
+
+    <!-- Progress Indicator Bar -->
+    <rect x="22" y="332" width="166" height="4" rx="2" fill="rgba(255, 255, 255, 0.15)"/>
+    <rect x="22" y="332" width="122" height="4" rx="2" fill="url(#cyanIndigo)"/>
+  </g>
+
+  <!-- FLOATING CARD LEFT: Growth Analytics Graph -->
+  <g transform="translate(45, 155)" filter="url(#softGlow)">
+    <rect width="200" height="168" rx="16" fill="url(#cardBg)" stroke="rgba(78, 199, 239, 0.4)" stroke-width="1.5"/>
+    
+    <!-- Card Header -->
+    <circle cx="24" cy="26" r="5" fill="#4EC7EF"/>
+    <text x="36" y="30" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">ORGANIC REACH</text>
+    
+    <!-- Big Stat -->
+    <text x="20" y="65" font-family="'Montserrat', sans-serif" font-size="24" font-weight="900" fill="#4EC7EF">+385%</text>
+    <text x="115" y="65" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#22C55E">▲ 24.8%</text>
+
+    <!-- Trend Line Chart -->
+    <g transform="translate(20, 82)">
+      <!-- Area Fill -->
+      <path d="M 0 55 Q 35 48 70 32 T 160 8 L 160 62 L 0 62 Z" fill="url(#chartArea)"/>
+      <!-- Line -->
+      <path d="M 0 55 Q 35 48 70 32 T 160 8" fill="none" stroke="#4EC7EF" stroke-width="3" stroke-linecap="round"/>
+      <!-- Active Pulse Point -->
+      <circle cx="160" cy="8" r="5.5" fill="#4EC7EF" filter="url(#glow)"/>
+      <circle cx="160" cy="8" r="2.5" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- FLOATING CARD RIGHT: Engagement & Campaign Score -->
+  <g transform="translate(465, 205)" filter="url(#softGlow)">
+    <rect width="190" height="150" rx="16" fill="url(#cardBg)" stroke="rgba(43, 52, 146, 0.6)" stroke-width="1.5"/>
+    
+    <!-- Badge -->
+    <rect x="18" y="18" width="72" height="20" rx="6" fill="rgba(78, 199, 239, 0.15)"/>
+    <text x="26" y="32" font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" fill="#4EC7EF" letter-spacing="0.5">STRATEGY</text>
+    
+    <text x="18" y="64" font-family="'Montserrat', sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Viral Growth</text>
+    <text x="18" y="80" font-family="'Montserrat', sans-serif" font-size="9" font-weight="500" fill="rgba(255, 255, 255, 0.65)">Kota Audience</text>
+
+    <!-- Mini Progress Bars -->
+    <g transform="translate(18, 95)">
+      <text x="0" y="10" font-family="'Montserrat', sans-serif" font-size="9" font-weight="600" fill="rgba(255, 255, 255, 0.85)">Engagement Rate</text>
+      <text x="120" y="10" font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" fill="#4EC7EF">94%</text>
+      <rect x="0" y="16" width="150" height="6" rx="3" fill="rgba(255, 255, 255, 0.12)"/>
+      <rect x="0" y="16" width="141" height="6" rx="3" fill="url(#cyanIndigo)"/>
+    </g>
+  </g>
+
+  <!-- FLOATING BADGE: Platform Icons -->
+  <g transform="translate(100, 365)">
+    <rect width="170" height="46" rx="12" fill="url(#cardBg)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1"/>
+    <!-- Instagram Icon -->
+    <circle cx="32" cy="23" r="13" fill="rgba(78, 199, 239, 0.15)"/>
+    <rect x="26" y="17" width="12" height="12" rx="3.5" stroke="#4EC7EF" stroke-width="1.2" fill="none"/>
+    <circle cx="32" cy="23" r="2.8" stroke="#4EC7EF" stroke-width="1.2" fill="none"/>
+    
+    <!-- Meta/Facebook -->
+    <circle cx="68" cy="23" r="13" fill="rgba(43, 52, 146, 0.35)"/>
+    <text x="64" y="28" font-family="'Montserrat', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF">f</text>
+    
+    <!-- YouTube -->
+    <circle cx="104" cy="23" r="13" fill="rgba(239, 68, 68, 0.22)"/>
+    <polygon points="101,19 109,23 101,27" fill="#EF4444"/>
+    
+    <!-- Verified check -->
+    <circle cx="142" cy="23" r="11" fill="#4EC7EF"/>
+    <path d="M138 23 L141 26 L147 20" stroke="#0B0E1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>

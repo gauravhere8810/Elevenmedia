@@ -1,0 +1,318 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Soft Drop Shadows for Nodes -->
+    <filter id="nodeShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="3" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+    <filter id="centerShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="blobGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Clip Paths for the 4 Avatar Circles -->
+    <clipPath id="clipAvatarTL">
+      <circle cx="240" cy="255" r="59"/>
+    </clipPath>
+    <clipPath id="clipAvatarTR">
+      <circle cx="455" cy="255" r="59"/>
+    </clipPath>
+    <clipPath id="clipAvatarBL">
+      <circle cx="240" cy="455" r="59"/>
+    </clipPath>
+    <clipPath id="clipAvatarBR">
+      <circle cx="455" cy="455" r="59"/>
+    </clipPath>
+  </defs>
+
+  <!-- ==========================================
+       1. ORGANIC PASTEL BACKGROUND BLOB
+       ========================================== -->
+  <!-- Subtle back glow for dark background vibrancy -->
+  <path d="M 280 130 C 370 100, 480 120, 520 200 C 570 290, 600 370, 560 460 C 520 540, 430 580, 340 575 C 230 570, 150 530, 130 440 C 110 350, 120 280, 180 200 C 230 140, 200 160, 280 130 Z" 
+        fill="#C4A8FF" opacity="0.15" filter="url(#blobGlow)" />
+
+  <!-- Main Organic Lavender Blob -->
+  <path d="M 285 135 C 375 105, 475 125, 515 205 C 565 295, 595 375, 555 455 C 515 535, 425 575, 340 570 C 235 565, 155 525, 135 440 C 115 355, 125 285, 185 205 C 235 145, 210 165, 285 135 Z" 
+        fill="#ECE3FC" />
+
+  <!-- ==========================================
+       2. CURVED DASHED CONNECTING NETWORK LINES
+       ========================================== -->
+  <g stroke="#1F232D" stroke-width="1.8" stroke-dasharray="4 4" stroke-linecap="round" fill="none" opacity="0.85">
+    <!-- Center to Top (WhatsApp) -->
+    <path d="M 350 350 L 350 160" />
+    
+    <!-- Center to Right (Instagram) -->
+    <path d="M 350 350 L 545 350" />
+    
+    <!-- Center to Bottom (Snapchat) -->
+    <path d="M 350 350 L 350 545" />
+    
+    <!-- Center to Left (Twitter) -->
+    <path d="M 350 350 L 155 350" />
+
+    <!-- Center to the 4 Avatars -->
+    <path d="M 350 350 L 240 255" />
+    <path d="M 350 350 L 455 255" />
+    <path d="M 350 350 L 240 455" />
+    <path d="M 350 350 L 455 455" />
+
+    <!-- Outer Graceful Arcs Connecting Network -->
+    <!-- Top-Left Avatar to Top (WhatsApp) -->
+    <path d="M 240 255 C 265 170, 310 160, 350 160" />
+    <!-- Top (WhatsApp) to Top-Right Avatar -->
+    <path d="M 350 160 C 390 160, 430 170, 455 255" />
+    <!-- Top-Right Avatar to Right (Instagram) -->
+    <path d="M 455 255 C 525 240, 545 295, 545 350" />
+    <!-- Right (Instagram) to Bottom-Right Avatar -->
+    <path d="M 545 350 C 545 405, 520 460, 455 455" />
+    <!-- Bottom-Right Avatar to Bottom (Snapchat) -->
+    <path d="M 455 455 C 430 535, 390 545, 350 545" />
+    <!-- Bottom (Snapchat) to Bottom-Left Avatar -->
+    <path d="M 350 545 C 310 545, 270 535, 240 455" />
+    <!-- Bottom-Left Avatar to Left (Twitter) -->
+    <path d="M 240 455 C 180 460, 155 410, 155 350" />
+    <!-- Left (Twitter) to Top-Left Avatar -->
+    <path d="M 155 350 C 155 290, 180 240, 240 255" />
+
+    <!-- Outer Swirling Loop Arcs (Faithful to Reference Image) -->
+    <path d="M 120 300 C 105 210, 190 145, 290 120" />
+    <path d="M 390 120 C 490 115, 580 200, 560 300" />
+    <path d="M 580 410 C 600 500, 500 580, 400 590" />
+    <path d="M 300 590 C 200 585, 120 500, 135 410" />
+  </g>
+
+  <!-- ==========================================
+       3. AVATARS (THE 4 AUDIENCE MEMBERS)
+       ========================================== -->
+
+  <!-- ------------------------------------------
+       AVATAR 1: TOP-LEFT (Woman with Wavy Hair)
+       ------------------------------------------ -->
+  <g filter="url(#nodeShadow)">
+    <!-- Base Background Circle with Outline -->
+    <circle cx="240" cy="255" r="60" fill="#B398F5" stroke="#161922" stroke-width="2.5" />
+    
+    <!-- Character Art Clipped to Disc -->
+    <g clip-path="url(#clipAvatarTL)">
+      <!-- Back Hair Mass -->
+      <path d="M 200 240 C 185 270, 185 305, 205 325 C 220 310, 215 280, 212 250 Z" fill="#161922" />
+      <path d="M 270 230 C 290 260, 290 300, 280 325 C 265 315, 268 280, 265 250 Z" fill="#161922" />
+
+      <!-- Neck & Collar/Chest -->
+      <path d="M 233 268 L 247 268 L 247 285 L 233 285 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2" />
+      <!-- White Shirt with Peter-Pan Collar -->
+      <path d="M 200 325 C 215 290, 265 290, 280 325 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.5" />
+      <path d="M 232 284 C 236 292, 240 295, 240 305 C 240 295, 244 292, 248 284" stroke="#161922" stroke-width="2" fill="none" />
+      <circle cx="240" cy="298" r="1.5" fill="#161922" />
+
+      <!-- Face Outline & Head -->
+      <path d="M 224 238 C 224 220, 256 220, 256 238 C 256 258, 248 274, 240 274 C 232 274, 224 258, 224 238 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.2" />
+
+      <!-- Facial Features -->
+      <!-- Eyes -->
+      <path d="M 230 240 C 232 238, 235 238, 237 240" stroke="#161922" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M 243 240 C 245 238, 248 238, 250 240" stroke="#161922" stroke-width="2" stroke-linecap="round" fill="none" />
+      <!-- Nose stroke -->
+      <path d="M 241 243 L 240 249 L 243 250" stroke="#161922" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <!-- Sweet smile -->
+      <path d="M 235 256 Q 240 262 246 256" stroke="#161922" stroke-width="2" stroke-linecap="round" fill="none" />
+
+      <!-- Front Hair & Beautiful Waves -->
+      <path d="M 224 232 C 220 200, 260 200, 258 230 C 252 225, 240 224, 224 232 Z" fill="#161922" />
+      <path d="M 224 232 C 218 245, 218 265, 222 275 C 218 260, 218 240, 224 232 Z" fill="#161922" />
+      <!-- Flowing Hair Strands (Left Side) -->
+      <path d="M 218 228 C 196 242, 192 268, 204 295 C 196 280, 194 250, 220 226 Z" fill="#161922" />
+    </g>
+  </g>
+
+  <!-- ------------------------------------------
+       AVATAR 2: TOP-RIGHT (Man with Afro/Curly Hair)
+       ------------------------------------------ -->
+  <g filter="url(#nodeShadow)">
+    <circle cx="455" cy="255" r="60" fill="#B398F5" stroke="#161922" stroke-width="2.5" />
+    
+    <g clip-path="url(#clipAvatarTR)">
+      <!-- Afro Hair Mass Silhouette -->
+      <path d="M 432 235 C 418 230, 410 205, 426 190 C 438 180, 460 178, 474 188 C 492 200, 492 225, 482 245 C 480 250, 472 255, 465 255 C 462 245, 458 240, 452 240 C 445 240, 438 242, 432 235 Z" 
+            fill="#161922" />
+      <!-- Textured curls bumps -->
+      <circle cx="430" cy="205" r="14" fill="#161922" />
+      <circle cx="448" cy="192" r="15" fill="#161922" />
+      <circle cx="468" cy="200" r="14" fill="#161922" />
+      <circle cx="480" cy="218" r="13" fill="#161922" />
+      <circle cx="478" cy="235" r="12" fill="#161922" />
+      <circle cx="425" cy="225" r="12" fill="#161922" />
+
+      <!-- Neck -->
+      <path d="M 448 265 L 462 265 L 462 284 L 448 284 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2" />
+
+      <!-- White Collared Shirt -->
+      <path d="M 415 325 C 430 290, 480 290, 495 325 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.5" />
+      <!-- Open Collar lines -->
+      <path d="M 448 280 L 442 296 L 455 304 L 468 296 L 462 280" stroke="#161922" stroke-width="2" fill="none" stroke-linejoin="round" />
+
+      <!-- Face Outline & Head -->
+      <path d="M 438 236 C 438 222, 470 222, 470 236 C 470 256, 464 270, 454 270 C 444 270, 438 256, 438 236 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.2" />
+
+      <!-- Facial Features -->
+      <!-- Eyes -->
+      <circle cx="446" cy="242" r="2" fill="#161922" />
+      <circle cx="462" cy="242" r="2" fill="#161922" />
+      <!-- Eyebrows -->
+      <path d="M 443 237 Q 447 235 450 237" stroke="#161922" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <path d="M 458 237 Q 462 235 466 237" stroke="#161922" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <!-- Nose stroke -->
+      <path d="M 454 242 L 452 249 L 456 250" stroke="#161922" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <!-- Confident smile -->
+      <path d="M 447 257 Q 454 263 461 257" stroke="#161922" stroke-width="2" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+
+  <!-- ------------------------------------------
+       AVATAR 3: BOTTOM-LEFT (Man with Beard)
+       ------------------------------------------ -->
+  <g filter="url(#nodeShadow)">
+    <circle cx="240" cy="455" r="60" fill="#B398F5" stroke="#161922" stroke-width="2.5" />
+    
+    <g clip-path="url(#clipAvatarBL)">
+      <!-- Hair Silhouette -->
+      <path d="M 222 430 C 220 395, 260 395, 260 425 C 255 425, 245 422, 235 424 C 228 426, 224 428, 222 430 Z" fill="#161922" />
+
+      <!-- Neck & Shoulders -->
+      <path d="M 233 465 L 247 465 L 247 485 L 233 485 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2" />
+      <!-- White Collared Shirt -->
+      <path d="M 200 525 C 215 488, 265 488, 280 525 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.5" />
+      <!-- Center Placket & Collar Tips -->
+      <path d="M 232 482 L 237 496 L 240 525" stroke="#161922" stroke-width="2" fill="none" />
+      <path d="M 248 482 L 243 496 L 240 525" stroke="#161922" stroke-width="2" fill="none" />
+      <circle cx="240" cy="505" r="1.5" fill="#161922" />
+      <circle cx="240" cy="517" r="1.5" fill="#161922" />
+
+      <!-- Face Outline & Head Base -->
+      <path d="M 226 434 C 226 420, 254 420, 254 434 C 254 445, 254 455, 252 462 C 248 472, 232 472, 228 462 C 226 455, 226 445, 226 434 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.2" />
+
+      <!-- Full Beard & Mustache -->
+      <path d="M 226 448 C 226 468, 234 478, 240 478 C 246 478, 254 468, 254 448 C 254 458, 248 468, 240 468 C 232 468, 226 458, 226 448 Z" fill="#161922" />
+      <!-- Sideburns to beard connection -->
+      <path d="M 226 438 L 226 460 C 232 476, 248 476, 254 460 L 254 438 C 251 445, 248 448, 240 448 C 232 448, 229 445, 226 438 Z" fill="#161922" />
+      <!-- Mustache -->
+      <path d="M 233 454 C 236 451, 240 452, 240 454 C 240 452, 244 451, 247 454 C 245 458, 235 458, 233 454 Z" fill="#161922" />
+
+      <!-- Facial Features -->
+      <!-- Eyes -->
+      <circle cx="234" cy="438" r="2" fill="#161922" />
+      <circle cx="246" cy="438" r="2" fill="#161922" />
+      <!-- Eyebrows -->
+      <path d="M 231 433 Q 235 431 238 433" stroke="#161922" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <path d="M 242 433 Q 246 431 249 433" stroke="#161922" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <!-- Nose stroke -->
+      <path d="M 241 438 L 239 444 L 242 445" stroke="#161922" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <!-- Warm smile inside beard -->
+      <path d="M 236 460 Q 240 464 244 460" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+
+  <!-- ------------------------------------------
+       AVATAR 4: BOTTOM-RIGHT (Woman with Flipped Bob & Bangs)
+       ------------------------------------------ -->
+  <g filter="url(#nodeShadow)">
+    <circle cx="455" cy="455" r="60" fill="#B398F5" stroke="#161922" stroke-width="2.5" />
+    
+    <g clip-path="url(#clipAvatarBR)">
+      <!-- Back Hair Mass with Retro Flipped Ends -->
+      <path d="M 425 435 C 415 455, 408 480, 420 495 C 428 500, 434 485, 430 465 Z" fill="#161922" />
+      <path d="M 485 435 C 495 455, 502 480, 490 495 C 482 500, 476 485, 480 465 Z" fill="#161922" />
+
+      <!-- Neck & Chest -->
+      <path d="M 448 468 L 462 468 L 462 485 L 448 485 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2" />
+      <!-- White Shirt with Rounded Collar -->
+      <path d="M 415 525 C 430 490, 480 490, 495 525 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.5" />
+      <path d="M 446 485 C 440 492, 442 500, 455 500 C 468 500, 470 492, 464 485" stroke="#161922" stroke-width="2" fill="none" />
+
+      <!-- Face Outline & Head -->
+      <path d="M 438 438 C 438 420, 472 420, 472 438 C 472 458, 464 474, 455 474 C 446 474, 438 458, 438 438 Z" fill="#FFFFFF" stroke="#161922" stroke-width="2.2" />
+
+      <!-- Side-Swept Bangs Hair Layer -->
+      <path d="M 436 434 C 434 402, 476 402, 474 434 C 468 425, 454 422, 436 434 Z" fill="#161922" />
+      <path d="M 436 434 C 444 430, 460 435, 470 442 C 468 430, 458 425, 446 425 C 440 425, 436 428, 436 434 Z" fill="#161922" />
+
+      <!-- Facial Features -->
+      <!-- Eyes -->
+      <path d="M 445 442 C 447 440, 450 440, 452 442" stroke="#161922" stroke-width="2" stroke-linecap="round" fill="none" />
+      <path d="M 458 442 C 460 440, 463 440, 465 442" stroke="#161922" stroke-width="2" stroke-linecap="round" fill="none" />
+      <!-- Eyebrows -->
+      <path d="M 444 437 Q 448 435 452 437" stroke="#161922" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <path d="M 458 437 Q 462 435 466 437" stroke="#161922" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <!-- Nose stroke -->
+      <path d="M 455 444 L 454 450 L 457 451" stroke="#161922" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <!-- Sweet smile -->
+      <path d="M 448 458 Q 455 464 462 458" stroke="#161922" stroke-width="2" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+
+
+  <!-- ==========================================
+       4. SOCIAL MEDIA PLATFORM NODES (4 SATELLITES)
+       ========================================== -->
+
+  <!-- ------------------------------------------
+       TOP NODE: WHATSAPP
+       ------------------------------------------ -->
+  <g transform="translate(350, 160)" filter="url(#nodeShadow)">
+    <circle cx="0" cy="0" r="42" fill="#1E232E" stroke="#161922" stroke-width="2.5" />
+    <!-- WhatsApp Speech Bubble Icon -->
+    <path d="M -16 -4 C -16 -13, -7 -20, 4 -20 C 15 -20, 24 -12, 24 -2 C 24 9, 15 17, 4 17 C 0 17, -4 16, -7 15 L -16 18 L -14 10 C -15 6, -16 2, -16 -4 Z" 
+          stroke="#A476F8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Handset phone glyph -->
+    <path d="M -3 -8 C -4 -7, -4 -5, -2 -3 C 0 -1, 3 1, 6 2 C 8 3, 10 2, 11 0 L 9 -2 C 8.5 -2.5, 7.5 -2.5, 7 -2 L 5.5 -1 C 4.5 -1.5, 2.5 -3.5, 2 -4.5 L 3 -6 C 3.5 -6.5, 3.5 -7.5, 3 -8 L 1 -10 C 0.5 -10.5, -0.5 -10.5, -1 -10 L -3 -8 Z" 
+          fill="#A476F8" />
+  </g>
+
+  <!-- ------------------------------------------
+       RIGHT NODE: INSTAGRAM
+       ------------------------------------------ -->
+  <g transform="translate(545, 350)" filter="url(#nodeShadow)">
+    <circle cx="0" cy="0" r="42" fill="#1E232E" stroke="#161922" stroke-width="2.5" />
+    <!-- Instagram Camera Glyph -->
+    <rect x="-18" y="-18" width="36" height="36" rx="10" stroke="#A476F8" stroke-width="3.2" fill="none" />
+    <circle cx="0" cy="0" r="8.5" stroke="#A476F8" stroke-width="3" fill="none" />
+    <circle cx="10" cy="-10" r="2.2" fill="#A476F8" />
+  </g>
+
+  <!-- ------------------------------------------
+       BOTTOM NODE: SNAPCHAT
+       ------------------------------------------ -->
+  <g transform="translate(350, 545)" filter="url(#nodeShadow)">
+    <circle cx="0" cy="0" r="42" fill="#1E232E" stroke="#161922" stroke-width="2.5" />
+    <!-- Snapchat Ghost Silhouette -->
+    <path d="M 0 -18 C -7 -18, -12 -13, -12 -5 C -12 -1, -10 2, -10 4 C -12 4, -14 5, -16 7 C -17 8, -16 10, -14 10 C -12 10, -11 9, -9 8 C -8 11, -6 13, -3 14 C -6 15, -11 16, -13 19 C -14 20, -12 21, -10 21 C -8 21, -5 19, -2 19 C 0 19, 2 20, 4 20 C 6 20, 8 19, 10 21 C 12 21, 14 20, 13 19 C 11 16, 6 15, 3 14 C 6 13, 8 11, 9 8 C 11 9, 12 10, 14 10 C 16 10, 17 8, 16 7 C 14 5, 12 4, 10 4 C 10 2, 12 -1, 12 -5 C 12 -13, 7 -18, 0 -18 Z" 
+          fill="#A476F8" />
+  </g>
+
+  <!-- ------------------------------------------
+       LEFT NODE: TWITTER (BIRD)
+       ------------------------------------------ -->
+  <g transform="translate(155, 350)" filter="url(#nodeShadow)">
+    <circle cx="0" cy="0" r="42" fill="#1E232E" stroke="#161922" stroke-width="2.5" />
+    <!-- Twitter Bird Silhouette -->
+    <path d="M 16 -8 C 14.5 -7, 13 -6.3, 11 -6 C 12.5 -7.2, 13.8 -9, 14.2 -11 C 12.5 -9.8, 10.8 -9, 9 -8.6 C 7.2 -10.5, 4.5 -11, 2 -9.8 C -0.5 -8.6, -1.8 -6, -1.2 -3.5 C -6 -3.8, -11 -6.2, -14 -10 C -15.5 -7.2, -14.8 -3.8, -12 -2 C -13.5 -2, -14.5 -2.5, -15.2 -3 C -15.2 0.2, -13 2.8, -10 3.5 C -11 3.8, -11.8 3.8, -12.5 3.6 C -11.8 6, -9.5 7.5, -7 7.5 C -9 9, -11.5 9.8, -14 9.8 C -15 9.8, -16 9.7, -16.5 9.6 C -14 11.2, -11 12, -8 12 C 4 12, 10.5 2, 10.5 -7 C 10.5 -7.3, 10.5 -7.6, 10.5 -8 C 12 -9, 14.5 -7.5, 16 -8 Z" 
+          fill="#A476F8" />
+  </g>
+
+
+  <!-- ==========================================
+       5. CENTRAL HUB (FACEBOOK)
+       ========================================== -->
+  <g transform="translate(350, 350)" filter="url(#centerShadow)">
+    <!-- Central Outer Ring/Circle -->
+    <circle cx="0" cy="0" r="54" fill="#1E232E" stroke="#161922" stroke-width="3" />
+    
+    <!-- Bold Classic Facebook 'f' -->
+    <path d="M 3 24 L -6 24 L -6 0 L -12 0 L -12 -9 L -6 -9 L -6 -16 C -6 -23, -2 -28, 8 -28 C 12 -28, 15 -27.5, 16 -27 L 16 -18 C 14.5 -18.2, 12.8 -18.5, 10.5 -18.5 C 6 -18.5, 4.5 -16, 4.5 -12 L 4.5 -9 L 15 -9 L 13.5 0 L 4.5 0 L 4.5 24 Z" 
+          fill="#FFFFFF" />
+  </g>
+</svg>
