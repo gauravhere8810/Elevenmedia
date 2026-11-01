@@ -5,6 +5,9 @@ node_modules/
 # Logs
 *.log
 
+# Helper scripts
+push.bat
+
 # OS metadata
 .DS_Store
 Thumbs.db
