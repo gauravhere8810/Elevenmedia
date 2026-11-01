@@ -2615,9 +2615,8 @@ footer::before {
     radial-gradient(ellipse at 25% 75%, rgba(11, 14, 26, 0.95) 0%, transparent 50%),
     linear-gradient(135deg, #0B0E1A 0%, #151a44 42%, #202766 70%, #0B0E1A 100%);
   margin-top: -58px;
-  padding-top: 116px;
-  padding-bottom: 5.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 124px;
+  padding-bottom: 4.8rem;
 }
 
 .inner-hero-container {
